@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap');
+body {
+    font-family: 'Faculty Glyphic', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    letter-spacing: 0.05em;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    background-color: #004d40;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1vw;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 0.5em 1em; /* Add padding to control background spacing */
+    display: inline-block; /* Ensures pseudo-element positioning */
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+/* Background square effect setup */
+.nav a::after {
+    content: ""; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #f59f2f;
+    z-index: -1; /* Ensures the background stays behind the text */
+    transition: width 0.3s ease, height 0.3s ease; /* Smooth expansion */
+    transform: translate(-50%, -50%);
+    border-radius: 5px; /* Optional: slightly rounded corners */
+}
+
+/* Hover effect to expand the background */
+.nav a:hover::after {
+    width: 100%; /* Expands to full width of the link */
+    height: 100%; /* Expands to full height of the link */
+}
+
+.nav a:hover {
+    color: #333; /* Optional: Changes text color on hover */
+}
+
+
+/* .nav a {
+    color: white;
+    text-decoration: none;
+} */
+
+.nav2 {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+section {
+    padding: 20px;
+}
+
+#question-papers h2, section h2 {
+    
+    color: #004d40;
+    text-align: center;
+    
+    /* background-color: #111; */
+
+   
+}
+
+.pg3{
+    background-color: #333;
+    /* color: #d4cdcd; */
+    color: #E0E0E0;
+}
+#about{
+    line-height: 1.5rem;
+}
+#about b{
+    color: #A5D6A7;
+}
+#about h2{
+    color: #11a088;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Question Cards */
+.question {
+    height: auto;
+    width: 18vw;
+    background: linear-gradient(135deg, #00796b, #054e42);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F8F9FA;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5vw;
+    margin-bottom: 1vw;
+   
+    transition: transform 0.01s ease-in;
+    
+}
+
+
+
+.badge {
+    background-color: #004d40;
+    color: #e0f7fa;
+    font-size: 1.2em;
+    border-radius: 50%;
+    padding: 0.6em;
+    width: 4em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.det {
+    text-align: center;
+}
+
+.questionS {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw; 
+    padding: 0 2vw; 
+}
+
+
+.question:hover {
+    transform: translateY(-5px) scale(1.1); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.705);
+    cursor: pointer;
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .questionS {
+        justify-content: center;
+        gap: 3vw;
+    }
+    .question {
+        width: 45%;
+        margin: 1.5vw auto;
+    }
+    .nav2 {
+        width: 80%;
+        justify-content: space-evenly;
+      
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .question {
+        width: 80%;
+        margin: 2vw auto;
+    }
+    .nav{
+        font-size: 0.9rem;
+    }
+    .nav2 {
+        width: 70%;
+        justify-content: space-evenly;
+        font-size: 0.8rem;
+      
+    }
+}
