@@ -4,7 +4,8 @@ body {
     font-family: 'Faculty Glyphic', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-color: #0c0b0b;
     letter-spacing: 0.05em;
 }
 html {
@@ -13,10 +14,12 @@ html {
 
 header {
     width: 100%;
-    background-color: #004d40;
+    /* background-color: #004d40; */
+    background-color: #e4820b;
     color: white;
-    padding: 1em 0;
+    padding: 0.5em 0;
     text-align: center;
+    
 }
 
 .nav {
@@ -28,8 +31,8 @@ header {
     color: white;
     text-decoration: none;
     position: relative;
-    padding: 0.5em 1em; /* Add padding to control background spacing */
-    display: inline-block; /* Ensures pseudo-element positioning */
+    padding: 0.5em 1em; 
+    display: inline-block; 
     transition: color 0.3s ease;
     z-index: 10;
 }
@@ -43,20 +46,20 @@ header {
     width: 0;
     height: 0;
     background-color: #f59f2f;
-    z-index: -1; /* Ensures the background stays behind the text */
-    transition: width 0.3s ease, height 0.3s ease; /* Smooth expansion */
+    z-index: -1; 
+    transition: width 0.3s ease, height 0.3s ease; 
     transform: translate(-50%, -50%);
-    border-radius: 5px; /* Optional: slightly rounded corners */
+    border-radius: 5px; 
 }
 
 /* Hover effect to expand the background */
 .nav a:hover::after {
-    width: 100%; /* Expands to full width of the link */
-    height: 100%; /* Expands to full height of the link */
+    width: 100%; 
+    height: 100%; 
 }
 
 .nav a:hover {
-    color: #333; /* Optional: Changes text color on hover */
+    color: #333; 
 }
 
 
@@ -77,10 +80,11 @@ section {
 
 #question-papers h2, section h2 {
     
-    color: #004d40;
-    text-align: center;
     
-    /* background-color: #111; */
+    text-align: center;
+    color: #E0E0E0;
+    
+
 
    
 }
@@ -112,12 +116,13 @@ footer {
 .question {
     height: auto;
     width: 18vw;
-    background: linear-gradient(135deg, #00796b, #054e42);
+    /* background: linear-gradient(135deg, #00796b, #054e42); */
+    background-color: #e4820b;
     border-radius: 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #F8F9FA;
+    color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5vw;
     margin-bottom: 1vw;
@@ -129,7 +134,8 @@ footer {
 
 
 .badge {
-    background-color: #004d40;
+    /* background-color: #004d40; */
+    background-color: #a86513;
     color: #e0f7fa;
     font-size: 1.2em;
     border-radius: 50%;
